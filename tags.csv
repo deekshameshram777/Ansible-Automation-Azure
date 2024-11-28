@@ -1,0 +1,3 @@
+ResourceName,Environment,Owner
+storageaccount01,production,xyz
+ansible-VM-nsg,devtest,abc
