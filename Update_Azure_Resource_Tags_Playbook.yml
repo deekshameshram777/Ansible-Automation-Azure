@@ -1,0 +1,13 @@
+---
+- name: Update Azure Resource Tags
+  hosts: localhost
+  gather_facts: no
+  tasks:
+
+    - name: Run shell script to update tags
+      shell: bash /home/azureuser/files/update_tags_script.sh /home/azureuser/files/tags.csv
+      register: result
+
+    - name: Show result
+      debug:
+        msg: "{{ result.stdout }}"
