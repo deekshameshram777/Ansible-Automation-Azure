@@ -33,18 +33,18 @@ git clone https://github.com/deekshameshram777/Ansible-Automation-Azure.git
 ### Repository Structure
 Ansible-Azure-Tagging-Automation/
 <br />
-├── Update_Azure_Resource_Tags_Playbook.yml   # Ansible playbook to apply tags <br />
-├── update_tags_script.sh        # Shell script to parse the CSV and call Ansible <br />
-├── input.csv             # Sample CSV input file <br />
-├── README.md             # Project documentation 
+├── Update_Azure_Resource_Tags_Playbook.yml_____   # Ansible playbook to apply tags <br />
+├── update_tags_script.sh_____        # Shell script to parse the CSV and call Ansible <br />
+├── input.csv_____             # Sample CSV input file <br />
+├── README.md_____             # Project documentation 
 
 ### Step 1: CSV File Structure
 The CSV file should contain the following columns (It can include the required N no. of tags):
 
-For Eg:
-ResourceName: The name of the Azure resource. <br />
-Environment: The environment tag for the resource (e.g., Production, Staging). <br />
-Owner: The owner of the resource (e.g., JohnDoe, JaneSmith). <br />
+For Eg: <br />
+**ResourceName:** The name of the Azure resource. <br />
+**Environment:** The environment tag for the resource (e.g., Production, Staging). <br />
+**Owner:** The owner of the resource (e.g., JohnDoe, JaneSmith). <br />
 
 Refer input.csv example file in code repo.
 
