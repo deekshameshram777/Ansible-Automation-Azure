@@ -9,8 +9,8 @@ This repository provides a solution to automate the process of updating tags on 
 ## $\textcolor{blue}{Overview}$
 This solution enables you to read a CSV file containing Azure resource names and their associated tags and then update those tags on Azure resources automatically. The automation process is facilitated by:
 
-1. A shell script (update_tags.sh) that processes the CSV file and updates the tags on Azure resources.
-2. An Ansible playbook (update_tags.yml) to execute the shell script in an automated fashion.
+1. A shell script (update_tags_script.sh) that processes the CSV file and updates the tags on Azure resources.
+2. An Ansible playbook (Update_Azure_Resource_Tags_Playbook.yml) to execute the shell script in an automated fashion.
 
 ## $\textcolor{blue}{Features}$
 ✅ Automates the tagging process for Azure resources using input from a CSV file. <br />
