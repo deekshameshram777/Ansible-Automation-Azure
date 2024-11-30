@@ -13,16 +13,16 @@ This solution enables you to read a CSV file containing Azure resource names and
 2. An Ansible playbook (update_tags.yml) to execute the shell script in an automated fashion.
 
 ## Features
-✅ Automates the tagging process for Azure resources using input from a CSV file.
-✅ Dynamically handles multiple tags per resource.
-✅ Scalable and reusable for large Azure environments.
-✅ Reduces human error and saves time compared to manual tagging.
-✅ Easily integrates with CI/CD pipelines for continuous automation.
+✅ Automates the tagging process for Azure resources using input from a CSV file. <br />
+✅ Dynamically handles multiple tags per resource. <br />
+✅ Scalable and reusable for large Azure environments. <br />
+✅ Reduces human error and saves time compared to manual tagging. <br />
+✅ Easily integrates with CI/CD pipelines for continuous automation. 
 
 ## Getting Started
 
 ### Prerequisites
-**Azure CLI:** Install and configure Azure CLI.
+**Azure CLI:** Install and configure Azure CLI. <br />
 **Ansible:** Install Ansible.
 
 ## Usage
@@ -32,19 +32,19 @@ git clone https://github.com/deekshameshram777/Ansible-Automation-Azure.git
 
 ### Repository Structure
 Ansible-Azure-Tagging-Automation/
-
-├── Update_Azure_Resource_Tags_Playbook.yml   # Ansible playbook to apply tags
-├── update_tags_script.sh        # Shell script to parse the CSV and call Ansible
-├── input.csv             # Sample CSV input file
-├── README.md             # Project documentation
+<br />
+├── Update_Azure_Resource_Tags_Playbook.yml   # Ansible playbook to apply tags <br />
+├── update_tags_script.sh        # Shell script to parse the CSV and call Ansible <br />
+├── input.csv             # Sample CSV input file <br />
+├── README.md             # Project documentation 
 
 ### Step 1: CSV File Structure
 The CSV file should contain the following columns (It can include the required N no. of tags):
 
 For Eg:
-ResourceName: The name of the Azure resource.
-Environment: The environment tag for the resource (e.g., Production, Staging).
-Owner: The owner of the resource (e.g., JohnDoe, JaneSmith).
+ResourceName: The name of the Azure resource. <br />
+Environment: The environment tag for the resource (e.g., Production, Staging). <br />
+Owner: The owner of the resource (e.g., JohnDoe, JaneSmith). <br />
 
 Refer input.csv example file in code repo.
 
@@ -56,7 +56,7 @@ The script parses the CSV file and calls the Ansible Playbook to apply the tags.
 ./update_tags_script.sh
 
 ### Notes on the Script:
-* The script logs into Azure using the VM's Managed Identity (az login --identity). If running the script outside of an Azure VM, you can authenticate using a Service Principal (az login --service-principal -u <appId> -p <password> --tenant <tenantId>).
+* The script logs into Azure using the VM's Managed Identity (az login --identity). If running the script outside of an Azure VM, you can authenticate using a Service Principal (az login --service-principal -u <appId> -p <password> --tenant <tenantId>). <br />
 The script loops through the CSV file, reading the ResourceName, Environment, and Owner fields, and applies those as tags to the Azure resources using the az resource tag command.
 
 
