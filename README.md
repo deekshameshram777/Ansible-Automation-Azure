@@ -6,26 +6,26 @@
 
 This repository provides a solution to automate the process of updating tags on Azure resources using a CSV file and a combination of a shell script and Ansible playbook.
 
-## Overview
+## $\textcolor{blue}{Overview}$
 This solution enables you to read a CSV file containing Azure resource names and their associated tags and then update those tags on Azure resources automatically. The automation process is facilitated by:
 
 1. A shell script (update_tags.sh) that processes the CSV file and updates the tags on Azure resources.
 2. An Ansible playbook (update_tags.yml) to execute the shell script in an automated fashion.
 
-## Features
+## $\textcolor{blue}{Features}$
 ✅ Automates the tagging process for Azure resources using input from a CSV file. <br />
 ✅ Dynamically handles multiple tags per resource. <br />
 ✅ Scalable and reusable for large Azure environments. <br />
 ✅ Reduces human error and saves time compared to manual tagging. <br />
 ✅ Easily integrates with CI/CD pipelines for continuous automation. 
 
-## Getting Started
+## $\textcolor{blue}{Getting\ Started}$
 
 ### Prerequisites
 **Azure CLI:** Install and configure Azure CLI. <br />
 **Ansible:** Install Ansible.
 
-## Usage
+## $\textcolor{blue}{Usage}$
 ### Clone the repository:
 
 git clone https://github.com/deekshameshram777/Ansible-Azure-Tagging-Automation
@@ -67,10 +67,10 @@ Refer input.csv example file in code repo.
 
 &nbsp; &nbsp; &nbsp; ansible-playbook Update_Azure_Resource_Tags_Playbook.yml
 
-## Explore the Code
+## $\textcolor{blue}{Explore\ the\ Code}$
 Access the full solution on GitHub: Ansible Azure Tagging Automation Repository
 
-## Connect and Share
+## $\textcolor{blue}{Connect\ and\ Share}$
 If you find this project helpful, give it a ⭐ and share your feedback!
 
 #Azure #DevOps #Automation #Ansible #ShellScripting
