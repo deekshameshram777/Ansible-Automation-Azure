@@ -33,10 +33,10 @@ git clone https://github.com/deekshameshram777/Ansible-Automation-Azure.git
 ### Repository Structure
 Ansible-Azure-Tagging-Automation/
 <br />
-├── Update_Azure_Resource_Tags_Playbook.yml_____   # Ansible playbook to apply tags <br />
-├── update_tags_script.sh_____        # Shell script to parse the CSV and call Ansible <br />
-├── input.csv_____             # Sample CSV input file <br />
-├── README.md_____             # Project documentation 
+├── Update_Azure_Resource_Tags_Playbook.yml &nbsp;     # Ansible playbook to apply tags <br />
+├── update_tags_script.sh &nbsp;          # Shell script to parse the CSV and call Ansible <br />
+├── input.csv &nbsp;               # Sample CSV input file <br />
+├── README.md &nbsp;               # Project documentation 
 
 ### Step 1: CSV File Structure
 The CSV file should contain the following columns (It can include the required N no. of tags):
@@ -50,20 +50,20 @@ Refer input.csv example file in code repo.
 
 ### Step 2: Run the Shell Script:
 
-Create a shell script (update_tags_script.sh) that will read the CSV file and update the tags on the specified Azure resources. This script uses the Azure CLI (az) to interact with Azure resources.
-The script parses the CSV file and calls the Ansible Playbook to apply the tags. Use the below command to run the shell script-
+* Create a shell script (update_tags_script.sh) that will read the CSV file and update the tags on the specified Azure resources. This script uses the Azure CLI (az) to interact with Azure resources. <br />
+* The script parses the CSV file and calls the Ansible Playbook to apply the tags. Use the below command to run the shell script- <br />
 
 ./update_tags_script.sh
 
 ### Notes on the Script:
 * The script logs into Azure using the VM's Managed Identity (az login --identity). If running the script outside of an Azure VM, you can authenticate using a Service Principal (az login --service-principal -u <appId> -p <password> --tenant <tenantId>). <br />
-The script loops through the CSV file, reading the ResourceName, Environment, and Owner fields, and applies those as tags to the Azure resources using the az resource tag command.
+* The script loops through the CSV file, reading the ResourceName, Environment, and Owner fields, and applies those as tags to the Azure resources using the az resource tag command.
 
 
 
 ### Step 3: Ansible Playbook:
-You can use an Ansible playbook to run the shell script (update_tags_script.sh) and automate the process.
-Use the below command to run the created playbook (Update_Azure_Resource_Tags_Playbook.yml) -
+* You can use an Ansible playbook to run the shell script (update_tags_script.sh) and automate the process. <br />
+* Use the below command to run the created playbook (Update_Azure_Resource_Tags_Playbook.yml) - <br />
 
 ansible-playbook Update_Azure_Resource_Tags_Playbook.yml
 
