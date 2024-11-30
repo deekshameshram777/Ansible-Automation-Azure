@@ -5,7 +5,7 @@
   tasks:
 
     - name: Run shell script to update tags
-      shell: bash /home/azureuser/files/update_tags_script.sh /home/azureuser/files/tags.csv
+      shell: bash /home/azureuser/files/update_tags_script.sh /home/azureuser/files/input.csv
       register: result
 
     - name: Show result
