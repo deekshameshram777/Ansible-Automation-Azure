@@ -55,9 +55,10 @@ Refer input.csv example file in code repo.
 
 &nbsp; &nbsp; &nbsp;      ./update_tags_script.sh
 
-**Notes on the Script:**
-* The script logs into Azure using the VM's Managed Identity (az login --identity). If running the script outside of an Azure VM, you can authenticate using a Service Principal (az login --service-principal -u <appId> -p <password> --tenant <tenantId>). <br />
-* The script loops through the CSV file, reading the ResourceName, Environment, and Owner fields, and applies those as tags to the Azure resources using the az resource tag command.
+&nbsp; **NOTE:**
+&nbsp; * The script logs into Azure using the VM's Managed Identity (az login --identity). If running the script outside of an Azure VM, you can authenticate using a Service Principal (az login --service- 
+        principal -u <appId> -p <password> --tenant <tenantId>). <br />
+&nbsp; * The script loops through the CSV file, reading the ResourceName, Environment, and Owner fields, and applies those as tags to the Azure resources using the az resource tag command.
 
 
 ### Step 3: Ansible Playbook:
